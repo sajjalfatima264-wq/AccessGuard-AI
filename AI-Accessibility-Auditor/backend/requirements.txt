@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic-settings
+playwright==1.48.0
+beautifulsoup4==4.12.3
