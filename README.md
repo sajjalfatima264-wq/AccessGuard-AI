@@ -1,6 +1,6 @@
 # AccessGuard AI
 
-An AI-ready accessibility auditing assistant that helps developers identify, understand, and fix common web accessibility issues.
+An accessibility auditing assistant with an AI-ready explanation architecture that helps developers identify, understand, and fix common web accessibility issues.
 
 AccessGuard AI analyzes websites against WCAG accessibility principles, detects violations, groups repeated problems, calculates an accessibility score, and provides clear developer-focused recommendations.
 
@@ -335,3 +335,84 @@ Accessibility tools should not only tell developers what is broken.
 They should help developers understand why it matters and how to fix it.
 
 AccessGuard AI transforms accessibility auditing from a checklist into an actionable development assistant.
+# Development Process: Codex & GPT-5.6
+
+## How Codex Accelerated Development
+
+AccessGuard AI was developed using **Codex** as an AI coding assistant throughout the project.
+
+Rather than generating the application end-to-end, Codex accelerated iterative development by assisting with:
+
+- Planning the overall project architecture
+- Bootstrapping the React and FastAPI applications
+- Implementing backend service modules
+- Refactoring code into reusable components
+- Debugging frontend and backend integration issues
+- Writing and refining automated tests
+- Reviewing code quality and suggesting improvements
+
+Development followed an incremental milestone-based workflow:
+
+1. Project setup and architecture
+2. Backend API implementation
+3. Website crawling with Playwright
+4. HTML parsing and semantic extraction
+5. WCAG rule engine
+6. Accessibility scoring
+7. Frontend dashboard
+8. Testing and refinement
+
+Each milestone was implemented, tested, and reviewed before moving to the next stage.
+
+---
+
+## How GPT-5.6 Was Used
+
+GPT-5.6 acted as a technical design and engineering assistant throughout development.
+
+It was used to:
+
+- Explore architectural alternatives
+- Review implementation decisions
+- Debug backend and frontend issues
+- Improve API design
+- Refactor code for maintainability
+- Review accessibility analysis logic
+- Suggest improvements to testing and project structure
+- Help prepare documentation and project presentation
+
+All implementation decisions were reviewed before being incorporated into the final project.
+
+---
+
+# Key Engineering Decisions
+
+## Deterministic Accessibility Analysis
+
+Accessibility evaluation requires predictable and reproducible results.
+
+For this reason, the core auditing pipeline is **deterministic rather than LLM-driven**. Website crawling, HTML parsing, WCAG rule evaluation, and accessibility scoring are implemented as dedicated modules with explicit logic.
+
+This approach provides:
+
+- Consistent and reproducible results
+- Fast execution without external API latency
+- Reliable accessibility checks
+- Clear separation of responsibilities across the pipeline
+
+---
+
+## Modular AI-Ready Architecture
+
+The explanation layer is intentionally isolated from the core accessibility scanning pipeline.
+
+Separating explanation generation from accessibility analysis allows future integration of LLM-based capabilities without modifying the scanning engine.
+
+Future enhancements include:
+
+- Context-aware accessibility explanations
+- Framework-specific implementation examples
+- AI-generated remediation guidance
+- Personalized developer recommendations
+
+This modular architecture keeps the accessibility engine reliable while allowing AI capabilities to evolve independently.
